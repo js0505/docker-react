@@ -1,0 +1,14 @@
+sudo: required
+language: generic
+services: 
+  - docker
+
+before_install:
+  - echo "start creating an image with dockerfile"
+  - docker build -t shinjs0505/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true shinjs0505/docker-react npm run test -- --coverage
+
+after_success:
+  - echo "test success"
