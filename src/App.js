@@ -1,7 +1,7 @@
 import "./App.css"
 
 function App() {
-	return <div className="App">느려!!</div>
+	return <div className="App">learn react</div>
 }
 
 export default App
